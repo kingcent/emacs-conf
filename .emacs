@@ -24,7 +24,8 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(case-fold-search nil)
- '(org-agenda-files (quote ("d:/emacs-24.3-bin-i386/org/test.org"))))
+; '(org-agenda-files (quote ("d:/emacs-24.3-bin-i386/org/test.org")))
+)
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -75,7 +76,7 @@ character
 (setq org-directory GTD_PATH)
 (setq org-remember-templates '(
 ("Task" ?t "** TODO %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Tasks")
-("Book" ?c "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Book")
+("Book" ?b "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Book")
 ("Calendar" ?c "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Calender")
 ("Project" ?p "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Project")))
 (setq org-default-notes-file (concat org-directory "inbox.org"))
@@ -84,10 +85,27 @@ character
 (list "TODO(t)" "|" "CANCELED(c)" "DONE(d)"))
 ;; 将项目转接在各文件之间，方便清理和回顾。
 (custom-set-variables
-'(org-refile-targets
-(quote
-(("inbox.org" :level . 1)("canceled.org" :level . 1) ("finished.org":level . 1))
-)))
+ '(org-refile-targets
+    (quote
+        (
+            ("e:/kuaipan/emacs-files/gtd/index.org" . (:level . 1))
+            ("e:/kuaipan/emacs-files/gtd/finished.org" . (:level . 1))
+            ("e:/kuaipan/emacs-files/gtd/canceled.org" . (:level . 1))
+        )
+    )
+  )
+)
+;(custom-set-variables
+;'(org-refile-targets
+;    (quote
+;        (
+;            ("inbox.org" :level . 1)
+;            ("canceled.org" :level . 1) 
+;            ("finished.org":level . 1)
+;        )
+;    )
+;)
+;)
 ;; 快速打开inbox
 (defun inbox() (interactive) (find-file (concat GTD_PATH "inbox.org")))
 (global-set-key "\C-cz" 'inbox)
