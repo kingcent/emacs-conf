@@ -77,6 +77,8 @@ character
 (setq org-remember-templates '(
 ("Task" ?t "** TODO %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Tasks")
 ("Book" ?b "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Book")
+("Article" ?a "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Article")
+("Video" ?v "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Video")
 ("Calendar" ?c "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Calender")
 ("Project" ?p "** %? %t\n %i\n %a" (concat GTD_PATH "inbox.org") "Project")))
 (setq org-default-notes-file (concat org-directory "inbox.org"))
@@ -88,7 +90,7 @@ character
  '(org-refile-targets
     (quote
         (
-            ("e:/kuaipan/emacs-files/gtd/index.org" . (:level . 1))
+            ("e:/kuaipan/emacs-files/gtd/inbox.org" . (:level . 1))
             ("e:/kuaipan/emacs-files/gtd/finished.org" . (:level . 1))
             ("e:/kuaipan/emacs-files/gtd/canceled.org" . (:level . 1))
         )
