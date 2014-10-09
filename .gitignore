@@ -1,0 +1,11 @@
+bin/
+etc/
+info/
+leim/
+lisp/
+org/
+site-lisp/
+README*
+COPYING*
+BUGS*
+*~
