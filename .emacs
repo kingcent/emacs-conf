@@ -45,6 +45,11 @@
 (require 'evil)
 (evil-mode 1)
 
+;;undo-tree
+(add-to-list 'load-path "d:/emacs-24.3-bin-i386/.emacs.d/undo-tree/")
+(require 'undo-tree)
+(global-undo-tree-mode)
+
 ;;set font family 
 ;(set-default-font "-outline-consolas-normal-r-normal-normal-14-97-96-96-c-*-iso8859-1")
 
@@ -88,7 +93,7 @@ character
  '(org-refile-targets
     (quote
         (
-            ("e:/kuaipan/emacs-files/gtd/index.org" . (:level . 1))
+            ("e:/kuaipan/emacs-files/gtd/inbox.org" . (:level . 1))
             ("e:/kuaipan/emacs-files/gtd/finished.org" . (:level . 1))
             ("e:/kuaipan/emacs-files/gtd/canceled.org" . (:level . 1))
         )

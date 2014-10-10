@@ -9,7 +9,7 @@
  (position . 95))
 ("org-remember-last-stored"
  (filename . "e:/kuaipan/emacs-files/gtd/inbox.org")
- (front-context-string . "** database cli ")
- (rear-context-string . "8 周三>\n* Project\n")
- (position . 662))
+ (front-context-string . "** TODO http://w")
+ (rear-context-string . "[药品网上交易平台资质介绍]]\n")
+ (position . 1243))
 )
